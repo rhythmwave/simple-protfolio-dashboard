@@ -7,7 +7,9 @@ import { alpha, useTheme } from '@mui/material/styles';
 
 import { bgGradient } from 'src/theme/css';
 
-import Logo from 'src/components/logo';
+import { Hero } from 'src/components/hero';
+import { HomeBar } from 'src/components/app-bar';
+import { NavTabs } from 'src/components/nav-tab';
 
 // ----------------------------------------------------------------------
 
@@ -24,28 +26,26 @@ export default function HomeView() {
         height: 1,
       }}
     >
-      <Logo
-        sx={{
-          position: 'fixed',
-          top: { xs: 16, md: 24 },
-          left: { xs: 16, md: 24 },
-        }}
-      />
-
-      <Stack alignItems="center" justifyContent="center" sx={{ height: 1 }}>
-        <Card
-          sx={{
-            p: 5,
-            width: 1,
-            maxWidth: 420,
-          }}
-        >
-          <Stack spacing={3}>
-            <Typography variant="h4">THis Is Home Page</Typography>
-          
-          </Stack>
-        </Card>
-      </Stack>
+      <HomeBar />
+      <Box sx={{ bgcolor: 'background.default' }}>
+        <Hero />
+        <NavTabs />
+        <Stack alignItems="center" justifyContent="center" sx={{ height: 1 }}>
+          <Card
+            sx={{
+              p: 5,
+              width: 1,
+              maxWidth: 420,
+            }}
+          >
+            <Stack spacing={3}>
+              <Typography variant="h4">THis Is Home Page</Typography>
+            
+            </Stack>
+          </Card>
+        </Stack>
+      </Box>
+      
     </Box>
   );
 }

@@ -17,7 +17,7 @@ import { useRouter } from 'src/routes/hooks';
 
 import { bgGradient } from 'src/theme/css';
 
-import Logo from 'src/components/logo';
+import {Logo} from 'src/components/logo';
 import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
@@ -101,7 +101,6 @@ export default function LoginView() {
         >
           <Stack spacing={3}>
             <Typography variant="h4">Sign in to Dashboard</Typography>
-          
 
             {renderForm}
           </Stack>

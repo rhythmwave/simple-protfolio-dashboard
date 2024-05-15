@@ -36,7 +36,7 @@ export default function Router() {
     },
     {
       element: <HomePage />,
-      index: true
+      index: true,
     },
     {
       path: '404',
